@@ -3,50 +3,45 @@
 
 <head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Pagina de Autos - Registro</title>
-
-        <!-- Bootstrap core CSS ../vendor/bootstrap/css/bootstrap.min.css-->
-        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom fonts for this template -->
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="/css/one-page-wonder.min.css" rel="stylesheet">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pagina de autos - Mis Autos</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="/">Pagina de Autos</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <i class="fas fa-bars ms-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/registro">Registro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/logout">Logout</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+   </nav>
 
-  <header class="masthead text-center text-dark">
+  <header class="masthead text-center text-white">
       <div class="masthead-content">
       <div class="container">
-      <h1 style="margin-top:80px; text-align: center;">Mis Autos</h1> 
+      <h1 class="masthead-heading text-uppercase">Mis Autos</h1> 
       </div>
       </div>
   </header>
@@ -56,12 +51,12 @@
       <div class="row align-items-center">
         <div class="col-lg-12 order-lg-12">
             
-            <a th:href="@{/auto/editar-perfil}" class="btn btn-primary btn-xl rounded-pill mt-5" style="float:right; margin-bottom: 55px; padding: 17px;">¡Agrega un Auto!</a>
+            <a th:href="@{/auto/editar-perfil}" class="btn btn-primary btn-xl text-uppercase m-3" style="float: right">¡Agrega un Auto!</a>
             <br/>
             
-            <table class="table table-dark table-hover">
+            <table class="table table-dark table-hover table-responsive">
                 <thead>
-                    <tr class="bg-black text-white">
+                    <tr class="bg-black text-white text-center">
                         <th>Foto</th>
                         <th>Nombre</th>
                         <th>Marca</th>
@@ -70,22 +65,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="auto : ${autos}">
+                    <tr th:each="auto : ${autos}" class="bg-black text-white text-center">
                         <td>
-                            <img th:if="${auto.foto != null}"  th:src="${'/foto/auto/' + auto.id}" alt="" style="max-height: 80px; border-radius: 100%">
+                            <img th:if="${auto.foto != null}"  th:src="${'/foto/auto/' + auto.id}" alt="" style="max-height: 80px; border-radius: 100%; padding-left: 10px">
                             <img th:if="${auto.foto == null}"  src="/img/m1.jpeg" alt="" style="max-height: 80px; border-radius: 100%"> 
                         </td>
                         <td th:text="${auto.nombre}"></td>
                         <td th:text="${auto.marca}"></td>
                         <td th:text="${auto.tipo}"></td>
                         <td>
-                            <a th:href="@{/auto/editar-perfil(id=__${auto.id}__,accion=Actualizar)}">Editar</a> -
-                            <a th:href="@{/auto/editar-perfil(id=__${auto.id}__,accion=Eliminar)}">Eliminar</a>
+                            <a th:href="@{/auto/editar-perfil(id=__${auto.id}__,accion=Actualizar)}" style="color: greenyellow">Editar</a> -
+                            <a th:href="@{/auto/editar-perfil(id=__${auto.id}__,accion=Eliminar)}" style="color: red">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <a th:href="@{/inicio}" class="btn btn-primary btn-x1 rounded-pill mt-5" style="float:right; margin-bottom: 10px; padding: 17px;">Volver</a>
+            <a th:href="@{/inicio}" class="btn btn-danger btn-xl text-uppercase m-3" style="float:right">Volver</a>
           </div>
         </div>
       </div>
