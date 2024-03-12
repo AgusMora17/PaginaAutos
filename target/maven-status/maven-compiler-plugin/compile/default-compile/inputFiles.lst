@@ -7,12 +7,14 @@ C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\WebAplication.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\servicios\NotificacionServicio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\entidades\Foto.java
+C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\repositorios\MostrarRepositorio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\repositorios\ZonaRepositorio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\controladores\FotoController.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\repositorios\AutoRepositorio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\servicios\FotoServicio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\servicios\AutoServicio.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\controladores\UsuarioController.java
+C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\controladores\MostrarController.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\controladores\AutoController.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\entidades\Auto.java
 C:\Users\agust\Desktop\ProgFS\Spring - Maven\paginaautos\src\main\java\agus\web\autos\controladores\ErroresController.java
